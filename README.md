@@ -47,9 +47,9 @@ src/
 
 | Team Member | Owns | Branch |
 |---|---|---|
-| Person A | Navbar, Hero | `feature/navbar-hero` |
-| Person B | Cottage Gallery, Amenities | `feature/gallery-amenities` |
-| Person C | Cottage Detail page, Footer | `feature/detail-footer` |
+| Bazal Ansar | Navbar, Hero | `feature/navbar-hero` |
+| Mamoona Waqar | Cottage Gallery, Amenities | `feature/gallery-amenities` |
+| Amna | Cottage Detail page, Footer | `feature/detail-footer` |
 
 ## 🚀 Getting Started
 
@@ -72,9 +72,9 @@ npm start
 
 | Name | Role | GitHub |
 |---|---|---|
-| — | Navbar & Hero | @— |
-| — | Gallery & Amenities | @— |
-| — | Cottage Detail & Footer | @— |
+| Bazal Ansar | Navbar & Hero | [@bazal1601-crypto](https://github.com/bazal1601-crypto) |
+| Mamoona Waqar | Gallery & Amenities | [@mamoonawaqar79](https://github.com/mamoonawaqar79) |
+| Amna | Cottage Detail & Footer | [@Amna-web01](https://github.com/Amna-web01) |
 
 ## 📄 License
 

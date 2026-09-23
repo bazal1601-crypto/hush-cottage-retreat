@@ -1,0 +1,126 @@
+.amenities-section {
+  width: 100%;
+  padding: 120px 6%;
+  background: #e8e6dc;
+  color: #26372c;
+}
+
+.amenities-section__header {
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.amenities-section__header p {
+  margin: 8px 0 0;
+  color: #69746b;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.amenities-section__header h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(45px, 6vw, 80px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+.amenities-section__header h2 em {
+  font-style: italic;
+}
+
+.amenities-section__list {
+  margin-left: 24%;
+  border-top: 1px solid rgba(38, 55, 44, 0.25);
+}
+
+.amenity-item {
+  display: grid;
+  grid-template-columns: 70px 1fr 1.2fr 40px;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(38, 55, 44, 0.25);
+}
+
+.amenity-item__number {
+  color: #69746b;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.amenity-item h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.amenity-item p {
+  max-width: 330px;
+  margin: 0;
+  color: #69736b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.amenity-item__arrow {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.amenity-item:hover .amenity-item__arrow {
+  transform: translate(4px, -4px);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .amenities-section {
+    padding: 90px 5%;
+  }
+
+  .amenities-section__header {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+
+  .amenities-section__list {
+    margin-left: 0;
+  }
+
+  .amenity-item {
+    grid-template-columns: 50px 1fr 1.3fr 30px;
+    gap: 20px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .amenities-section {
+    padding: 70px 5%;
+  }
+
+  .amenities-section__header h2 {
+    font-size: 46px;
+  }
+
+  .amenity-item {
+    grid-template-columns: 40px 1fr 25px;
+    gap: 15px;
+  }
+
+  .amenity-item p {
+    display: none;
+  }
+
+  .amenity-item h3 {
+    font-size: 23px;
+  }
+}

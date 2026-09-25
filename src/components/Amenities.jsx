@@ -1,53 +1,62 @@
-import React from "react";
 import "./Amenities.css";
 
 const amenities = [
   {
     number: "01",
-    title: "Private Stay",
-    text: "A peaceful private space designed for a comfortable escape.",
+    title: "Balanced Breakfast",
+    text: "Start your morning with a fresh and carefully prepared breakfast.",
   },
   {
     number: "02",
-    title: "Nature Views",
-    text: "Wake up to beautiful surroundings, fresh air and quiet moments.",
+    title: "BBQ Area",
+    text: "Enjoy relaxed evenings together around our private BBQ area.",
   },
   {
     number: "03",
-    title: "Cozy Interiors",
-    text: "Warm, thoughtful interiors made for relaxing and slowing down.",
+    title: "Tub, Sauna & Pool",
+    text: "Slow down and recharge with spaces designed for complete relaxation.",
   },
   {
     number: "04",
-    title: "Outdoor Space",
-    text: "Enjoy your own space to sit, breathe and reconnect with nature.",
+    title: "Private Transfer",
+    text: "Travel comfortably with our convenient private transfer service.",
+  },
+  {
+    number: "05",
+    title: "Pet Friendly",
+    text: "Your stay is better when your four-legged companions can join you.",
   },
 ];
 
 function Amenities() {
   return (
-    <section className="amenities-section">
-      <div className="amenities-section__header">
-        <p>WHAT'S INCLUDED</p>
+    <section className="amenities" id="amenities">
+      <div className="amenities-heading">
+        <p className="amenities-label">THE HUSH EXPERIENCE</p>
 
         <h2>
-          Everything you need
+          INCLUDED
           <br />
-          for a <em>quiet stay.</em>
+          <span>WITH YOUR COTTAGE</span>
         </h2>
+
+        <p className="amenities-intro">
+          Everything you need for a comfortable, peaceful and memorable stay.
+        </p>
       </div>
 
-      <div className="amenities-section__list">
-        {amenities.map((item) => (
-          <article className="amenity-item" key={item.number}>
-            <span className="amenity-item__number">{item.number}</span>
+      <div className="amenities-list">
+        {amenities.map((amenity) => (
+          <div className="amenity-item" key={amenity.number}>
+            <span className="amenity-number">{amenity.number}</span>
 
-            <h3>{item.title}</h3>
+            <div className="amenity-content">
+              <h3>{amenity.title}</h3>
+              <p>{amenity.text}</p>
+            </div>
 
-            <p>{item.text}</p>
-
-            <span className="amenity-item__arrow">↗</span>
-          </article>
+            <span className="amenity-arrow">↗</span>
+          </div>
         ))}
       </div>
     </section>

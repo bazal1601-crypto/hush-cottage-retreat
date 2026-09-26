@@ -1,141 +1,155 @@
 .cottage-gallery {
-background: #f4f1e9;
-padding: 110px 7%;
-color: #26352c;
+  background: #f4f1e9;
+  padding: 110px 7%;
+  color: #26352c;
 }
 
-.gallery-heading {
-max-width: 720px;
-margin: 0 auto 65px;
-text-align: center;
+.gallery-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+  margin-bottom: 65px;
 }
 
-.gallery-eyebrow {
-margin: 0 0 16px;
-font-size: 12px;
-font-weight: 600;
-letter-spacing: 3px;
-color: #6d7b68;
+.gallery-label {
+  margin: 0 0 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #6d7b68;
 }
 
-.gallery-heading h2 {
-margin: 0;
-font-family: Georgia, "Times New Roman", serif;
-font-size: clamp(42px, 5vw, 68px);
-font-weight: 400;
-line-height: 1.05;
-color: #26352c;
+.gallery-top h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: #26352c;
 }
 
 .gallery-intro {
-max-width: 560px;
-margin: 24px auto 0;
-font-size: 16px;
-line-height: 1.8;
-color: #687268;
+  max-width: 390px;
+  margin: 0 0 5px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #687268;
 }
 
 .cottage-grid {
-max-width: 1250px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
 .cottage-card {
-background: #fffdf8;
-overflow: hidden;
-transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: #fffdf8;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .cottage-card:hover {
-transform: translateY(-8px);
-box-shadow: 0 20px 45px rgba(38, 53, 44, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(38, 53, 44, 0.12);
 }
 
 .cottage-image {
-width: 100%;
-height: 390px;
-overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
 }
 
 .cottage-image img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
-transition: transform 0.6s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
 }
 
 .cottage-card:hover .cottage-image img {
-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.cottage-content {
-padding: 30px 28px 34px;
+.cottage-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 9px 13px;
+  background: rgba(248, 247, 241, 0.92);
+  color: #26352c;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-.cottage-content h3 {
-margin: 0 0 12px;
-font-family: Georgia, "Times New Roman", serif;
-font-size: 30px;
-font-weight: 400;
-color: #26352c;
+.cottage-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 22px 0;
 }
 
-.cottage-content p {
-margin: 0 0 24px;
-font-size: 14px;
-line-height: 1.75;
-color: #70776f;
+.cottage-info h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #26352c;
 }
 
-.cottage-content button {
-border: 1px solid #314238;
-background: transparent;
-color: #314238;
-padding: 12px 22px;
-font-size: 12px;
-letter-spacing: 1.2px;
-text-transform: uppercase;
-cursor: pointer;
-transition: all 0.3s ease;
+.cottage-info p {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #6d7b68;
 }
 
-.cottage-content button:hover {
-background: #314238;
-color: #f4f1e9;
+.cottage-arrow {
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.cottage-card:hover .cottage-arrow {
+  transform: translate(3px, -3px);
+}
+
+.cottage-description {
+  margin: 12px 0 0;
+  padding: 0 22px 26px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #70776f;
 }
 
 @media (max-width: 900px) {
-.cottage-grid {
-grid-template-columns: 1fr 1fr;
-}
-
-.cottage-image {
-height: 330px;
-}
+  .cottage-gallery {
+    padding: 90px 5%;
+  }
+  .gallery-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .cottage-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
-.cottage-gallery {
-padding: 80px 6%;
-}
-
-.gallery-heading {
-margin-bottom: 45px;
-}
-
-.gallery-heading h2 {
-font-size: 42px;
-}
-
-.cottage-grid {
-grid-template-columns: 1fr;
-}
-
-.cottage-image {
-height: 360px;
-}
+  .cottage-gallery {
+    padding: 70px 5%;
+  }
+  .gallery-top {
+    margin-bottom: 45px;
+  }
+  .cottage-grid {
+    grid-template-columns: 1fr;
+  }
 }

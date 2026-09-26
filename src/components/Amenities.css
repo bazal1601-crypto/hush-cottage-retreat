@@ -1,0 +1,147 @@
+.amenities {
+  background: #f3f0e8;
+  color: #171914;
+  padding: 120px 6%;
+}
+
+.amenities-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.amenities-label {
+  grid-column: 1 / -1;
+  margin: 0 0 5px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.amenities-heading h2 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(55px, 7.5vw, 110px);
+  line-height: 0.84;
+  letter-spacing: -5px;
+  font-weight: 800;
+}
+
+.amenities-heading h2 span {
+  font-weight: 400;
+}
+
+.amenities-intro {
+  max-width: 330px;
+  margin: 0 0 5px;
+  color: #686d65;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.amenities-list {
+  border-top: 1px solid rgba(23, 25, 20, 0.3);
+}
+
+.amenity-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 45px;
+  align-items: center;
+  gap: 35px;
+  min-height: 135px;
+  border-bottom: 1px solid rgba(23, 25, 20, 0.3);
+  transition: padding 0.3s ease;
+}
+
+.amenity-item:hover {
+  padding-left: 15px;
+}
+
+.amenity-number {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #777b73;
+}
+
+.amenity-content h3 {
+  margin: 0 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.amenity-content p {
+  max-width: 520px;
+  margin: 0;
+  color: #70756d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.amenity-arrow {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(23, 25, 20, 0.35);
+  border-radius: 50%;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.amenity-item:hover .amenity-arrow {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 900px) {
+  .amenities {
+    padding: 90px 5%;
+  }
+
+  .amenities-heading {
+    display: block;
+    margin-bottom: 55px;
+  }
+
+  .amenities-label {
+    margin-bottom: 25px;
+  }
+
+  .amenities-intro {
+    margin-top: 30px;
+  }
+
+  .amenity-item {
+    grid-template-columns: 55px 1fr 40px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .amenities {
+    padding: 70px 5%;
+  }
+
+  .amenities-heading h2 {
+    font-size: 55px;
+    letter-spacing: -3px;
+  }
+
+  .amenity-item {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+    padding: 25px 0;
+  }
+
+  .amenity-arrow {
+    grid-column: 2;
+  }
+
+  .amenity-content h3 {
+    font-size: 26px;
+  }
+}
